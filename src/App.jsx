@@ -1,29 +1,19 @@
-import logo from './logo.svg';
+
 import './App.css';
 import ButtonComponent from './ButtonComponent';
 import ImageComponent from './ImageComponent';
-
+import NavBar from './NavBar';
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <NavBar link={'#'} linkCurrent ={'Home'} linkSecond= {'Chi siamo'} linkThird= {'Documenti'}/>
+{/* <Nav link={'#'} linkCurrent ={'Home'} linkSecond= {'Chi siamo'} linkThird= {'Documenti'}/> */}
+    
       <ButtonComponent className='btn' typeBtn='button' text='Sono un bottone'/>
-      <ImageComponent img={logo} alt='logo-react'/>
+      <ImageComponent className = 'w-75' img='https://plus.unsplash.com/premium_photo-1680706777319-176e18e03a4b?q=80&w=1902&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='logo-react'/>
       </header>
     </div>
   );
 }
-
 export default App;
